@@ -1,2 +1,3 @@
-# Implement an Artificial Neuron Network
+# Implement an Artificial Neuron Network from scratch
+
 
