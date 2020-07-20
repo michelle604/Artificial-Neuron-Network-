@@ -14,17 +14,18 @@ Our class will have one static method, percentage_limiter(percentage), which acc
 
 Constructor for NNData will have three parameters:
 
-x should default to None.  x will be the example part of the data we want loaded.  It should be passed as a list of lists, with each row representing one example.  If x is None, then x should be set to [] right away in __init__().  Will somebody please explain why we would do this instead of setting x=[] in the parameter list?
-y should default to None.  y will be the label part of the data we want loaded.It should be passed as a list of lists, with each row representing one label.  If y is None, then y should be set to [] right away in __init__().  
-percentage is an int that should default to 100, and represents the percentage of the data we want used as our training set.
+- x should default to None.  x will be the example part of the data we want loaded.  It should be passed as a list of lists, with each row representing one example.  If x is None, then x should be set to [] right away in __init__().  
+- y should default to None.  y will be the label part of the data we want loaded.It should be passed as a list of lists, with each row representing one label.  If y is None, then y should be set to [] right away in __init__().  
+- percentage is an int that should default to 100, and represents the percentage of the data we want used as our training set.
+
 The constructor will also initialize some internal data:
 
-self.x and self.y can be set to None to avoid warnings.
-percentage should be passed to NNData.percentage_limiter(), and the result assigned to self.train_percentage.
-self.train_indices, initially set to None, is a list of pointers to the training subset of the data
-self.train_pool, initially set to None, will be a dequeue containing the examples not yet used in the current epoch.  You will learn about dequeue in the next module.
-self.test_indices, initially set to None, is a list of pointers to the testing subset of the data
-self.test_pool, initially set to None, will be a dequeue containing the examples not yet used in the current test run
+- self.x and self.y can be set to None to avoid warnings.
+- percentage should be passed to NNData.percentage_limiter(), and the result assigned to self.train_percentage.
+- self.train_indices, initially set to None, is a list of pointers to the training subset of the data
+- self.train_pool, initially set to None, will be a dequeue containing the examples not yet used in the current epoch.  You will learn about dequeue in the next module.
+- self.test_indices, initially set to None, is a list of pointers to the testing subset of the data
+- self.test_pool, initially set to None, will be a dequeue containing the examples not yet used in the current test run
 Finally, the constructor will call load_data(x, y).
 
 ### Method Stub
